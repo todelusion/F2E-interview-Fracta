@@ -1,5 +1,4 @@
 {
-  "name": "petbooker",
   "version": "1.0.0",
   "description": "",
   "type": "module",
@@ -7,10 +6,6 @@
     "dev": "vite",
     "build": "tsc && vite build",
     "preview": "vite preview"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/todelusion/PetBooker.git"
   },
   "dependencies": {
     "@tailwindcss/line-clamp": "^0.4.2",
