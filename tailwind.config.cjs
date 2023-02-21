@@ -5,6 +5,9 @@ module.exports = {
       screens: {
         xs: "384px",
       },
+      maxWidth: {
+        "8xl": "1440px",
+      },
       fontSize: {
         "4.5xl": "2.5rem",
         "5.5xl": "3.5rem",
@@ -28,9 +31,8 @@ module.exports = {
       },
     },
     fontFamily: {
-      sans: ["Noto Sans TC", "Roboto"],
-      serif: ["Noto Serif TC", "Times"],
-      dela: ["Dela Gothic One"],
+      sansTC: ["Noto Sans TC", "Roboto"],
+      sansEG: ["Poppins", "Roboto"],
     },
   },
   plugins: [
