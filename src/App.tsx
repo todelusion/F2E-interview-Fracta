@@ -7,6 +7,7 @@ import {
   menuPath,
 } from "./assets/icons";
 import Hero from "./components/Hero";
+import MotionOrbit from "./components/MotionOrbit";
 import useMobie from "./hooks/useMobie";
 
 function App(): JSX.Element {
@@ -15,12 +16,16 @@ function App(): JSX.Element {
   return (
     <>
       <header className="flex-between mx-auto mb-[85px] max-w-8xl px-7 pt-8">
-        <img src={isMobile ? logoPath : logoTitlePath} alt="logo" />
+        <img src={logoPath} alt="logo" className="block md:hidden" />
+        <img src={logoTitlePath} alt="logo" className="hidden md:block" />
         <button type="button">
           <img src={menuPath} alt="" />
           <span className="font-sansEG text-white">MENU</span>
         </button>
       </header>
+      <section className="min-h-screen">
+        <MotionOrbit />
+      </section>
       <section className="mx-auto mb-52 min-h-screen max-w-8xl md:mb-36">
         <h1 className="scale-0">序形設計</h1>
         <Hero />
