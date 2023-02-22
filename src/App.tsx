@@ -1,5 +1,11 @@
 import React from "react";
-import { logoPath, logoTitlePath, menuPath } from "./assets/icons";
+import {
+  arrowPath,
+  arrowTextPath,
+  logoPath,
+  logoTitlePath,
+  menuPath,
+} from "./assets/icons";
 import Hero from "./components/Hero";
 import useMobie from "./hooks/useMobie";
 
@@ -7,18 +13,65 @@ function App(): JSX.Element {
   const isMobile = useMobie();
 
   return (
-    <div className="max-w-8xl text-white">
-      <header className="flex-between mb-[85px] px-7 pt-8">
+    <>
+      <header className="flex-between mx-auto mb-[85px] max-w-8xl px-7 pt-8">
         <img src={isMobile ? logoPath : logoTitlePath} alt="logo" />
         <button type="button">
           <img src={menuPath} alt="" />
           <span className="font-sansEG text-white">MENU</span>
         </button>
       </header>
-      <section className="min-h-screen">
+      <section className="mx-auto mb-52 min-h-screen max-w-8xl md:mb-36">
+        <h1 className="scale-0">序形設計</h1>
         <Hero />
       </section>
-    </div>
+      <section className="relative min-h-screen rounded-t-[30px] bg-second px-6 pt-28 pb-6 md:pt-[182px]">
+        <div className="mx-auto max-w-8xl">
+          <div className="absolute -top-24 right-6 -translate-y-full md:-top-60 md:right-32">
+            <div className="relative h-44 w-44">
+              <img
+                src={arrowTextPath}
+                alt="arrow"
+                className="absolute-center"
+              />
+              <img src={arrowPath} alt="arrow" className="absolute-center" />
+            </div>
+          </div>
+          <article className="mb-113">
+            <h2 className="mx-auto mb-5 max-w-3xl text-center font-sansEG text-4xl font-medium uppercase md:text-5.5xl md:leading-tight">
+              To Dedicate a Proposal for the Coming Era
+            </h2>
+            <h2 className="mb-10 text-center text-xl font-medium md:text-2xl">
+              不斷迎接時代挑戰
+            </h2>
+            <p className="mx-auto max-w-2xl text-center text-[#D0D0D0]">
+              序形是品牌數位化的節點，各種產業透過序形構築品牌的數位樣貌，一同定義未來。
+              <br />
+              <br />
+              我們堅信不同的合作是促成環境進步的動力，序形打造串接品牌策略與數位媒體的渠道，幫助企業切入未來的數位主流市場，推動產業變革的動能，數位市場絕對不僅網路與電商，序形提供企業數位變革的方向，成就非凡。
+            </p>
+          </article>
+        </div>
+      </section>
+      <footer className="bg-second px-6 pb-6">
+        <h2 className="mb-6">序形設計股份有限公司</h2>
+        <ul className="mb-9 flex flex-wrap">
+          <li className="flex w-full md:basis-4/12">
+            <span className="basis-2/12 md:max-w-max">E-Mail &nbsp;</span>
+            <span className="basis-1/12">|</span>
+            <span>info@fractalab.com</span>
+          </li>
+          <li className="mb-9 flex w-full md:mb-0 md:basis-4/12">
+            <span className="basis-2/12 md:max-w-max">TEL &nbsp;</span>
+            <span className="basis-1/12">|</span>
+            <span>02-338455678</span>
+          </li>
+          <li className="w-full text-center text-[#ACACAC] md:basis-4/12 md:text-right">
+            © 2022 by Fracta Lab . All rights reserved.
+          </li>
+        </ul>
+      </footer>
+    </>
   );
 }
 
