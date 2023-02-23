@@ -1,21 +1,13 @@
 import React from "react";
-import {
-  arrowPath,
-  arrowTextPath,
-  logoPath,
-  logoTitlePath,
-  menuPath,
-} from "./assets/icons";
+import { logoPath, logoTitlePath, menuPath } from "./assets/icons";
 import Hero from "./components/Hero";
+import MotionArrow from "./components/MotionArrow";
 import MotionOrbit from "./components/MotionOrbit";
-import useMobie from "./hooks/useMobie";
 
 function App(): JSX.Element {
-  const isMobile = useMobie();
-
   return (
     <>
-      <header className="flex-between mx-auto mb-[85px] max-w-8xl px-7 pt-8">
+      <header className="flex-between mx-auto mb-20 max-w-8xl px-7 pt-8">
         <img src={logoPath} alt="logo" className="block md:hidden" />
         <img src={logoTitlePath} alt="logo" className="hidden md:block" />
         <button type="button">
@@ -23,24 +15,17 @@ function App(): JSX.Element {
           <span className="font-sansEG text-white">MENU</span>
         </button>
       </header>
-      <section className="min-h-screen">
-        <MotionOrbit />
-      </section>
+      <h1 className="scale-0">序形設計</h1>
       <section className="mx-auto mb-52 min-h-screen max-w-8xl md:mb-36">
-        <h1 className="scale-0">序形設計</h1>
+        <div className="w-full md:absolute md:-top-1/3">
+          <MotionOrbit className="-z-10 md:scale-[200%]" />
+        </div>
         <Hero />
       </section>
       <section className="relative min-h-screen rounded-t-[30px] bg-second px-6 pt-28 pb-6 md:pt-[182px]">
         <div className="mx-auto max-w-8xl">
-          <div className="absolute -top-24 right-6 -translate-y-full md:-top-60 md:right-32">
-            <div className="relative h-44 w-44">
-              <img
-                src={arrowTextPath}
-                alt="arrow"
-                className="absolute-center"
-              />
-              <img src={arrowPath} alt="arrow" className="absolute-center" />
-            </div>
+          <div className="absolute -top-24 right-6 -translate-y-full lg:-top-60 lg:right-32">
+            <MotionArrow />
           </div>
           <article className="mb-113">
             <h2 className="mx-auto mb-5 max-w-3xl text-center font-sansEG text-4xl font-medium uppercase md:text-5.5xl md:leading-tight">

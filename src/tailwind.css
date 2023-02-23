@@ -6,7 +6,7 @@
 
 @layer base {
   body {
-    @apply box-border bg-primary font-sansTC text-white scrollbar-thin scrollbar-thumb-white;
+    @apply box-border bg-primary font-sansTC  text-white scrollbar-thin scrollbar-thumb-white;
   }
 }
 @layer components {
@@ -25,4 +25,8 @@
   .absolute-center {
     @apply absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2;
   }
+}
+
+body {
+  overflow-x: hidden;
 }

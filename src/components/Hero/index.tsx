@@ -1,6 +1,10 @@
-function Hero(): JSX.Element {
+interface IHeroProps {
+  className?: string;
+}
+
+function Hero({ className }: IHeroProps): JSX.Element {
   return (
-    <article>
+    <article className={`${className ?? ""} w-full`}>
       <p className="mx-auto mb-5 text-center font-sansEG text-4xl font-medium uppercase sm:text-5.5xl sm:leading-[67.2px]">
         <span className="mb-2 block text-base font-normal">ABOUT</span>
         We Accelerate
