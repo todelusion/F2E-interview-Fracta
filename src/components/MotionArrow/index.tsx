@@ -18,14 +18,14 @@ function MotionArrow(): JSX.Element {
   }, []);
 
   return (
-    <div ref={arrowCtx} className="relative h-44 w-44">
+    <div ref={arrowCtx} className="flex-center h-44 w-44">
       <img
         id="arrowText"
         src={arrowTextPath}
         alt="arrow"
-        className="absolute-center"
+        className=" absolute"
       />
-      <img id="arrow" src={arrowPath} alt="arrow" className="absolute-center" />
+      <img id="arrow" src={arrowPath} alt="arrow" className=" absolute" />
     </div>
   );
 }
