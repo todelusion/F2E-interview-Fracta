@@ -27,7 +27,7 @@ function MotionGravity(): JSX.Element {
       const tl = gsap.timeline({
         scrollTrigger: {
           trigger: "#triggerGravity",
-          markers: true,
+          // markers: true,
           start: "top 40%",
           end: "top 1%",
           scrub: true,
