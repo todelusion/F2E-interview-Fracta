@@ -1,7 +1,9 @@
 import React from "react";
 import { logoPath, logoTitlePath, menuPath } from "./assets/icons";
+import { gravity } from "./assets/motion";
 import Hero from "./components/Hero";
 import MotionArrow from "./components/MotionArrow";
+import MotionGravity from "./components/MotionGravity";
 import MotionOrbit from "./components/MotionOrbit";
 
 function App(): JSX.Element {
@@ -22,10 +24,18 @@ function App(): JSX.Element {
         </div>
         <Hero />
       </section>
-      <section className="relative min-h-screen rounded-t-[30px] bg-second px-6 pt-28 pb-6 md:pt-[182px]">
+      <section
+        style={{
+          backgroundImage: `url(${gravity})`,
+        }}
+        className="relative min-h-screen rounded-t-[30px] bg-second bg-cover bg-center bg-no-repeat px-6 pt-28 pb-6 md:bg-right md:pt-[182px]"
+      >
         <div className="mx-auto max-w-8xl">
           <div className="absolute -top-24 right-6 -translate-y-full lg:-top-60 lg:right-32">
             <MotionArrow />
+          </div>
+          <div className="absolute left-0 top-0 h-full w-full">
+            <MotionGravity />
           </div>
           <article className="mb-113">
             <h2 className="mx-auto mb-5 max-w-3xl text-center font-sansEG text-4xl font-medium uppercase md:text-5.5xl md:leading-tight">
