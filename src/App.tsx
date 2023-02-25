@@ -1,52 +1,21 @@
-import Lottie from "lottie-web";
-
-import React, { useEffect, useLayoutEffect, useRef } from "react";
-import { logoPath, logoTitlePath, menuPath } from "./assets/icons";
+import { logoPath, logoTitlePath } from "./assets/icons";
 import { gravity } from "./assets/motion";
 import Hero from "./components/Hero";
+import LottieMenuButton from "./components/LottieMenuButton";
 import MotionArrow from "./components/MotionArrow";
 import MotionGravity from "./components/MotionGravity";
 import MotionOrbit from "./components/MotionOrbit";
-import LottieMenu from "./assets/lottie/LottieMenu.json";
 
 function App(): JSX.Element {
-  const lottie = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    if (lottie.current === null) return;
-    Lottie.loadAnimation({
-      container: lottie.current,
-      renderer: "svg",
-      loop: true,
-      autoplay: true,
-      animationData: LottieMenu,
-    });
-  });
-
   return (
     <>
       <header className="flex-between mx-auto mb-20 max-w-8xl px-7 pt-8">
         <img src={logoPath} alt="logo" className="block md:hidden" />
         <img src={logoTitlePath} alt="logo" className="hidden md:block" />
-        <button type="button">
-          <img src={menuPath} alt="" />
-          <span className="font-sansEG text-white">MENU</span>
-        </button>
+        <LottieMenuButton className="w-14" />
       </header>
       <h1 className="scale-0">序形設計</h1>
-      <div ref={lottie} className="Lottie" />
-      <svg width="100" height="100">
-        <circle cx="10" cy="50" r="10">
-          <animateTransform
-            attributeName="transform"
-            attributeType="XML"
-            type="translate"
-            values="10 0; -10 0; 10 0"
-            dur="1s"
-            repeatCount="indefinite"
-          />
-        </circle>
-      </svg>
+
       <section className="mx-auto mb-52 min-h-screen max-w-8xl md:mb-36">
         <div className="w-full md:absolute md:-top-1/3">
           <MotionOrbit className="-z-10 md:scale-[200%]" />
