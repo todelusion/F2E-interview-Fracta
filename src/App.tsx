@@ -4,7 +4,6 @@ import Hero from "./components/Hero";
 import LottieMenuButton from "./components/LottieMenuButton";
 import MotionArrow from "./components/MotionArrow";
 import MotionGravity from "./components/MotionGravity";
-import MotionGravityOverflow from "./components/MotionGravityOverflow";
 import MotionOrbit from "./components/MotionOrbit";
 
 function App(): JSX.Element {
@@ -27,14 +26,13 @@ function App(): JSX.Element {
         style={{
           backgroundImage: `url(${gravity})`,
         }}
-        className="relative min-h-screen rounded-t-[30px] bg-second bg-cover bg-center bg-no-repeat px-6 pt-28 pb-6 lg:bg-right lg:pt-[182px]"
+        className="relative min-h-screen   rounded-t-[30px] bg-second bg-cover bg-center bg-no-repeat px-6 pt-28 pb-6 lg:bg-right lg:pt-[182px]"
       >
         <div className="mx-auto max-w-8xl">
-          <div className="absolute -top-24 right-6 -translate-y-full lg:-top-60 lg:right-32">
+          <div className="absolute -top-24 right-11 -translate-y-full lg:-top-60 lg:right-32">
             <MotionArrow />
           </div>
           <div className="absolute left-0 top-0 h-full w-full">
-            <MotionGravityOverflow />
             <MotionGravity />
           </div>
           <article className="mb-113">
@@ -53,7 +51,6 @@ function App(): JSX.Element {
           </article>
         </div>
       </section>
-      {/* <section className=" min-h-screen" /> */}
       <footer className="bg-second px-6 pb-6">
         <h2 className="mb-6">序形設計股份有限公司</h2>
         <ul className="mb-9 flex flex-wrap">
