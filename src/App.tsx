@@ -1,12 +1,28 @@
-import React from "react";
+import Lottie from "lottie-web";
+
+import React, { useEffect, useLayoutEffect, useRef } from "react";
 import { logoPath, logoTitlePath, menuPath } from "./assets/icons";
 import { gravity } from "./assets/motion";
 import Hero from "./components/Hero";
 import MotionArrow from "./components/MotionArrow";
 import MotionGravity from "./components/MotionGravity";
 import MotionOrbit from "./components/MotionOrbit";
+import LottieMenu from "./assets/lottie/LottieMenu.json";
 
 function App(): JSX.Element {
+  const lottie = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (lottie.current === null) return;
+    Lottie.loadAnimation({
+      container: lottie.current,
+      renderer: "svg",
+      loop: true,
+      autoplay: true,
+      animationData: LottieMenu,
+    });
+  });
+
   return (
     <>
       <header className="flex-between mx-auto mb-20 max-w-8xl px-7 pt-8">
@@ -18,6 +34,19 @@ function App(): JSX.Element {
         </button>
       </header>
       <h1 className="scale-0">序形設計</h1>
+      <div ref={lottie} className="Lottie" />
+      <svg width="100" height="100">
+        <circle cx="10" cy="50" r="10">
+          <animateTransform
+            attributeName="transform"
+            attributeType="XML"
+            type="translate"
+            values="10 0; -10 0; 10 0"
+            dur="1s"
+            repeatCount="indefinite"
+          />
+        </circle>
+      </svg>
       <section className="mx-auto mb-52 min-h-screen max-w-8xl md:mb-36">
         <div className="w-full md:absolute md:-top-1/3">
           <MotionOrbit className="-z-10 md:scale-[200%]" />
@@ -28,7 +57,7 @@ function App(): JSX.Element {
         style={{
           backgroundImage: `url(${gravity})`,
         }}
-        className="relative min-h-screen rounded-t-[30px] bg-second bg-cover bg-center bg-no-repeat px-6 pt-28 pb-6 md:bg-right md:pt-[182px]"
+        className="relative min-h-screen rounded-t-[30px] bg-second bg-cover bg-center bg-no-repeat px-6 pt-28 pb-6 lg:bg-right lg:pt-[182px]"
       >
         <div className="mx-auto max-w-8xl">
           <div className="absolute -top-24 right-6 -translate-y-full lg:-top-60 lg:right-32">
@@ -53,6 +82,7 @@ function App(): JSX.Element {
           </article>
         </div>
       </section>
+      {/* <section className=" min-h-screen" /> */}
       <footer className="bg-second px-6 pb-6">
         <h2 className="mb-6">序形設計股份有限公司</h2>
         <ul className="mb-9 flex flex-wrap">
