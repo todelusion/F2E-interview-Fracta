@@ -1,9 +1,10 @@
 import { logoPath, logoTitlePath } from "./assets/icons";
-import { gravity } from "./assets/motion";
+import { Ellipse53, Ellipse62, gravity } from "./assets/motion";
 import Hero from "./components/Hero";
 import LottieMenuButton from "./components/LottieMenuButton";
 import MotionArrow from "./components/MotionArrow";
 import MotionGravity from "./components/MotionGravity";
+import MotionGravityOverflow from "./components/MotionGravityOverflow";
 import MotionOrbit from "./components/MotionOrbit";
 
 function App(): JSX.Element {
@@ -33,6 +34,7 @@ function App(): JSX.Element {
             <MotionArrow />
           </div>
           <div className="absolute left-0 top-0 h-full w-full">
+            <MotionGravityOverflow />
             <MotionGravity />
           </div>
           <article className="mb-113">

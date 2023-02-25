@@ -60,19 +60,6 @@ function MotionGravity(): JSX.Element {
       <div id="triggerGravity" className=" absolute top-1/3" />
 
       <ul className="MotionGravity">
-        <li className=" absolute -right-32 top-0 md:right-100">
-          <svg
-            width="165"
-            height="801"
-            viewBox="0 0 165 801"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path id="path53" d="M164.5 0.5C123.833 114.5 32.6 437.2 1 800" />
-          </svg>
-
-          <img id="Ellipse53" src={Ellipse53} alt="" />
-        </li>
         <li className=" absolute right-0 bottom-32 md:right-100">
           <svg
             width="76"
@@ -187,19 +174,6 @@ function MotionGravity(): JSX.Element {
             />
           </svg>
           <img id="Ellipse61" src={Ellipse61} alt="" className="" />
-        </li>
-        <li className=" absolute top-0 right-20 md:right-1/2">
-          <svg
-            width="224"
-            height="869"
-            viewBox="0 0 224 869"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-            className="scale-75 md:scale-100"
-          >
-            <path id="path62" d="M0.5 1C77.6667 179.5 228.6 603.7 223 868.5" />
-          </svg>
-          <img id="Ellipse62" src={Ellipse62} alt="" />
         </li>
       </ul>
 
