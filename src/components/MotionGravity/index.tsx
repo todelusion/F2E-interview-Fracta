@@ -53,7 +53,10 @@ function MotionGravity(): JSX.Element {
   }, []);
 
   return (
-    <div ref={gravityCtx} className="relative h-full overflow-x-hidden">
+    <div
+      ref={gravityCtx}
+      className="pointer-events-none relative h-full overflow-x-clip"
+    >
       <div id="triggerGravity" className=" absolute top-1/3" />
 
       <ul className="MotionGravity">

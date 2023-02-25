@@ -34,6 +34,6 @@
 }
 
 body {
-  overflow-x: hidden;
+  overflow-x: clip;
   scroll-behavior: smooth;
 }
