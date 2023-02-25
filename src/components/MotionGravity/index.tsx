@@ -3,7 +3,6 @@ import { MotionPathPlugin } from "gsap/MotionPathPlugin";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import React, { useLayoutEffect, useRef } from "react";
 import {
-  Ellipse53,
   Ellipse54,
   Ellipse55,
   Ellipse56,
@@ -12,9 +11,6 @@ import {
   Ellipse59,
   Ellipse60,
   Ellipse61,
-  Ellipse62,
-  gravity,
-  motionGravityRef,
 } from "../../assets/motion";
 
 function MotionGravity(): JSX.Element {

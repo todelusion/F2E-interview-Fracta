@@ -1,3 +1,4 @@
+import gsap from "gsap";
 import { useRef, useLayoutEffect } from "react";
 import { Ellipse53, Ellipse62 } from "../../assets/motion";
 
