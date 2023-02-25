@@ -37,9 +37,3 @@ body {
   overflow-x: hidden;
   scroll-behavior: smooth;
 }
-svg circle {
-  animation-play-state: paused !important;
-}
-svg:hover circle {
-  animation-play-state: running !important;
-}
