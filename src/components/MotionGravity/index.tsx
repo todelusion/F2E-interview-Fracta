@@ -22,6 +22,7 @@ function MotionGravity(): JSX.Element {
     const ctx = gsap.context(() => {
       gsap.registerPlugin(MotionPathPlugin);
       gsap.registerPlugin(ScrollTrigger);
+
       const tl = gsap.timeline({
         scrollTrigger: {
           trigger: "#triggerGravity",
@@ -31,6 +32,16 @@ function MotionGravity(): JSX.Element {
         },
       });
 
+      for (let i = 53; i <= 62; i += 1) {
+        gsap.from(`#Ellipse${i}`, {
+          motionPath: {
+            path: `#path${i}`,
+            align: `#path${i}`,
+            start: 0,
+            alignOrigin: [0.5, 0.5],
+          },
+        });
+      }
       for (let i = 53; i <= 62; i += 1) {
         tl.to(
           `#Ellipse${i}`,

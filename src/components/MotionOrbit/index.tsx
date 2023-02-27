@@ -2,8 +2,7 @@ import gsap from "gsap";
 import { MotionPathPlugin } from "gsap/MotionPathPlugin";
 import { useLayoutEffect, useRef } from "react";
 import { Ellipse1Path, Ellipse2Path, Ellipse3Path } from "../../assets/icons";
-import { motionOrbitPath, dMotionOrbit } from "../../assets/motion";
-import "./style.css";
+import { dMotionOrbit } from "../../assets/motion";
 
 interface IMotionOrbitProps {
   className?: string;
